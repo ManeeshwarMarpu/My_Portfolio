@@ -1,12 +1,12 @@
 import React from "react";
-import ReactDOM from "react-dom/client";  // ✅ Use createRoot
+import ReactDOM from "react-dom/client";  
 import App from "./App";
-import ThemeContextProvider from "./contexts/ThemeContext"; // ✅ Correct Import
+import ThemeContextProvider from "./contexts/ThemeContext"; 
 
-const root = ReactDOM.createRoot(document.getElementById("root")); // ✅ Corrected
+const root = ReactDOM.createRoot(document.getElementById("root")); 
 root.render(
   <React.StrictMode>
-    <ThemeContextProvider> {/* ✅ Wrap the App with Theme Provider */}
+    <ThemeContextProvider> {}
       <App />
     </ThemeContextProvider>
   </React.StrictMode>

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from "prop-types";
 
 const Document = styled.img`
     display: none;
@@ -126,12 +127,7 @@ const Skills = styled.div`
     gap: 12px;
     margin-top: -10px;
 `
-const certificates = styled.div`
-    width: 100%;
-    display: flex;
-    gap: 12px;
-    margin-top: -10px;
-`
+
 const ItemWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -171,9 +167,10 @@ const ExperienceCard = ({ experience }) => {
                         <Skills>
                             <b>Skills:</b>
                             <ItemWrapper>
-                                {experience?.skills?.map((skill, index) => (
-                                    <Skill>• {skill}</Skill>
-                                ))}
+                            {experience?.skills?.map((skill, index) => (
+  <Skill key={index}>{skill}</Skill> 
+))}
+
                             </ItemWrapper>
                         </Skills>
                     </>
@@ -187,5 +184,8 @@ const ExperienceCard = ({ experience }) => {
         </Card>
     )
 }
-
+ExperienceCard.propTypes = {
+    experience: PropTypes.object.isRequired, // ✅ Ensures `experience` is an object and required
+  };
+  
 export default ExperienceCard
