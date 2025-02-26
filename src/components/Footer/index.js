@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn'; 
 import { Bio } from '../../data/constants';
 import React from 'react';
+import { GitHubIcon } from '../Navbar/NavbarStyledComponent';
 const FooterContainer = styled.div`
   width: 100%;
   padding: 2rem 0;
@@ -100,8 +100,8 @@ function Footer() {
 
           <SocialMediaIcon href={Bio.twitter} target="display"><TwitterIcon /></SocialMediaIcon>
           <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
-        </SocialMediaIcons>
+          <SocialMediaIcon href={Bio.github} target="display"><GitHubIcon /></SocialMediaIcon>
+        </SocialMediaIcons> 
         <Copyright>
           &copy; 2025 Maneeshwar Marpu. All rights reserved.
         </Copyright>

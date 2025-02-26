@@ -1,4 +1,5 @@
-// import HeroImg from '../../images/g1.webp'
+
+
 export const Bio = {
   name: "Maneeshwar Marpu",
   roles: [
@@ -14,20 +15,13 @@ export const Bio = {
   resume:
     "https://drive.google.com/file/d/16wvuv3qgnvSyP6Dz5lGqM8nJvyKqq6YM/view?usp=drive_link",
 
-    linkedin: "www.linkedin.com/in/marpumaneeshwar",
+    linkedin: "https://www.linkedin.com/in/marpumaneeshwar",
+    Twitter: "https://x.com/MManeeshwar"
 };
   
 
 export const skills = [
-  // {
-  //   title: "Programming Languages",
-  //   skill: [
-  //     { name: "Java", img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg" },
-  //     { name: "Python", img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" },
-  //     { name: "C", img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg" },
-      
-  //   ]
-  // },
+
   {
     title: "Web Development",
     skills: [
@@ -80,29 +74,7 @@ export const skills = [
         name: "C",
         image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/c/c-original.svg",
       },
-      // {
-      //   name: "Python",
-      //   image:
-      //     "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
-      // },
-      // {
-      //   name: "MySQL",
-      //   image:
-      //     "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
-      // },
-      // {
-      //   name: "Postgresql",
-      //   image: "https://www.postgresql.org/media/img/about/press/elephant.png",
-      // },
-      // {
-      //   name: "MongoDB",
-      //   image:
-      //     "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
-      // },
-      // {
-      //   name: "Firebase",
-      //   image: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
-      // },
+     
     ],
   },
   {
@@ -140,12 +112,7 @@ export const skills = [
         "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg",  
       },
 
-      // {
-      //   name: "VS Code",
-      //   image:
-      //     "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
-      // },
-
+ 
 
     ],
   },
@@ -173,11 +140,7 @@ export const skills = [
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
       },
 
-      // {
-      //   name: "VS Code",
-      //   image:
-      //     "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519",
-      // },
+      
 
 
     ],
@@ -268,8 +231,7 @@ export const experiences = [
     date: "July 2020 - July 2022",
     desc: "Mentored students during lab sessions, providing guidance on programming and troubleshooting issues. Developed strong leadership, coaching, and problem-solving skills.",
     skills: ["Communication", "Leadership", "Coaching", "Problem Solving", "Conflict Resolution"],
-    // doc: "https://firebasestorage.googleapis.com/v0/b/buckoid-917cf.appspot.com/o/Screenshot%20from%202023-05-28%2023-20-46.png?alt=media&token=5570f995-e8f4-4f12-bb2f-73bcf4b20730",
-  },
+      },
   {
     id: 5,
     img: "https://firebasestorage.googleapis.com/v0/b/portfolio-84f15.firebasestorage.app/o/uh.png?alt=media&token=624e57e6-06ba-4c79-9090-46fe39bb49e8",
@@ -471,10 +433,10 @@ export const certifications = [
 
 ];
 
-export const TimeLineData = [
-  { year: 2017, text: "Started my journey" },
-  { year: 2018, text: "Worked as a freelance developer" },
-  { year: 2019, text: "Founded JavaScript Mastery" },
-  { year: 2020, text: "Shared my projects with the world" },
-  { year: 2021, text: "Started my own platform" },
-];
+// export const TimeLineData = [
+//   { year: 2017, text: "Started my journey" },
+//   { year: 2018, text: "Worked as a freelance developer" },
+//   { year: 2019, text: "Founded JavaScript Mastery" },
+//   { year: 2020, text: "Shared my projects with the world" },
+//   { year: 2021, text: "Started my own platform" },
+// ];
