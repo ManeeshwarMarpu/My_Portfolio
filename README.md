@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # My Portfolio
 Welcome to my portfolio! This project showcases my skills, projects, and experiences as a web developer.
 
@@ -39,3 +40,6 @@ To run this portfolio locally, follow these steps:
 ## Usage
 After installing and running the project locally, you can navigate through the different sections of the portfolio using the navigation menu. Explore the About Me section to learn more about my background and skills. Visit the Projects section to see detailed information about my projects, including descriptions and screenshots. Use the Contact section to send me a message or inquiry.
 
+=======
+# My_Portfolio
+>>>>>>> 88125894aed519f63379e835b23d876b05183dbe

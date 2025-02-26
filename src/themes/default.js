@@ -1,3 +1,6 @@
+const theme = {};
+
+
 export default {
     // Temp fonts
     fonts: {
@@ -40,4 +43,6 @@ export default {
     card_background: "#1a1a1a",
     border: "#333",
   };
+  
+
   
