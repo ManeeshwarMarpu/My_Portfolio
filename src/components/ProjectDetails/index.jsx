@@ -3,6 +3,8 @@ import { CloseRounded, GitHub, LinkedIn } from '@mui/icons-material';
 import { Modal } from '@mui/material';
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import PropTypes from "prop-types";
+
 
 // 1) Container for the modal overlay
 const Container = styled.div`
@@ -302,5 +304,10 @@ const Index = ({ openModal = {}, setOpenModal }) => {
     </Modal>
   );
 };
+Index.propTypes = {
+    openModal: PropTypes.object.isRequired,
+    setOpenModal: PropTypes.func.isRequired,
+  };
+  
 
 export default Index;
