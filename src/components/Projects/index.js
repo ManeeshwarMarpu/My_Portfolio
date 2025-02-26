@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider } from './ProjectsStyle'
 import ProjectCard from '../Cards/ProjectCards'
 import { projects } from '../../data/constants'
-
+import PropTypes from "prop-types";
 
 const Projects = ({openModal,setOpenModal}) => {
   const [toggle, setToggle] = useState('all');
@@ -22,9 +22,9 @@ const Projects = ({openModal,setOpenModal}) => {
           }
           <Divider />
           {toggle === 'web app' ?
-            <ToggleButton active value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
+            <ToggleButton active value="web app" onClick={() => setToggle('web app')}>WEB APPS</ToggleButton>
             :
-            <ToggleButton value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
+            <ToggleButton value="web app" onClick={() => setToggle('web app')}>WEB APPS</ToggleButton>
           }
           <Divider />
           {toggle === 'Data Science' ?
@@ -40,19 +40,37 @@ const Projects = ({openModal,setOpenModal}) => {
           }
         </ToggleButtonGroup>
         <CardContainer>
-          {toggle === 'all' && projects
-            .map((project) => (
-              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
-            ))}
-          {projects
-            .filter((item) => item.category == toggle)
-            .map((project) => (
-              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
-            ))}
+        {toggle === "all" &&
+  projects.map((project) => (
+    <ProjectCard 
+      key={project.id} // ✅ Add a unique key
+      project={project} 
+      openModal={openModal} 
+      setOpenModal={setOpenModal} 
+    />
+  ))
+}
+
+{projects
+  .filter((item) => item.category === toggle)
+  .map((project) => (
+    <ProjectCard 
+      key={project.id} // ✅ Add a unique key
+      project={project} 
+      openModal={openModal} 
+      setOpenModal={setOpenModal} 
+    />
+  ))
+}
+
         </CardContainer>
       </Wrapper>
     </Container>
   )
 }
+Projects.propTypes = {
+  openModal: PropTypes.object.isRequired,
+  setOpenModal: PropTypes.func.isRequired,
+};
 
 export default Projects

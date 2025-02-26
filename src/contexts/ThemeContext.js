@@ -1,5 +1,6 @@
 import React, { createContext, useState } from "react";
 import { ThemeProvider } from "styled-components";
+import PropTypes from "prop-types";
 
 // Define Light and Dark Themes
 const lightTheme = {
@@ -32,6 +33,10 @@ const ThemeContextProvider = ({ children }) => {
       </ThemeProvider>
     </ThemeContext.Provider>
   );
+};
+
+ThemeContextProvider.propTypes = {
+  children: PropTypes.node.isRequired, 
 };
 
 export default ThemeContextProvider;

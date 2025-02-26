@@ -1,5 +1,5 @@
 import { Link as LinkR } from 'react-router-dom';
-import _default from '../../themes/default';
+
 import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaGithub } from "react-icons/fa";

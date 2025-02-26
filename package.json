@@ -1,5 +1,5 @@
 {
-  "name": "Maneeshwar-Marpu-portfolio",
+  "name": "maneeshwar-marpu-portfolio",
   "version": "0.1.0",
   "homepage": "https://maneeshwarmarpu.github.io/",
   "private": true,
@@ -60,5 +60,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.4",
+    "globals": "^16.0.0"
   }
 }
