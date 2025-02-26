@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from "prop-types";
 
 const Document = styled.img`
     display: none;
@@ -9,7 +10,7 @@ const Document = styled.img`
     border-radius: 10px;
     &:hover{
         cursor: pointer;
-        opacity: 0.8;
+        opacity: 0.8; 
     }
 `
 
@@ -131,7 +132,7 @@ const Grade = styled.div`
 const EducationCard = ({ education }) => {
     return (
         <Card>
-            <Top>
+            <Top> 
                 <Image src={education.img} />
                 <Body>
                     <Name>{education.school}</Name>
@@ -146,5 +147,15 @@ const EducationCard = ({ education }) => {
         </Card>
     )
 }
-
+EducationCard.propTypes = {
+    education: PropTypes.shape({
+      img: PropTypes.string.isRequired, // Validate `img` as a string (URL)
+      school: PropTypes.string.isRequired, // Validate `school` as a string
+      degree: PropTypes.string.isRequired, // Validate `degree` as a string
+      date: PropTypes.string.isRequired, // Validate `date` as a string
+      grade: PropTypes.string.isRequired, // Validate `grade` as a string
+      desc: PropTypes.string.isRequired, // Validate `desc` as a string
+    }).isRequired,
+  };
+  
 export default EducationCard

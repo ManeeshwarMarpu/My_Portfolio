@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "../../contexts/ThemeContext";
 import { Nav, NavbarContainer, NavLink, NavItems, GitHubButton, NavLogo } from './NavbarStyledComponent';
-import { DiCssdeck } from "react-icons/di";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 

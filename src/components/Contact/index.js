@@ -23,7 +23,7 @@ const Heading = styled.h2`
 `;
 
 const Description = styled.p`
-  color: #d1d1d1;
+  color: #d1d1d1;  
   font-size: 16px;
   margin-bottom: 40px;
 `;

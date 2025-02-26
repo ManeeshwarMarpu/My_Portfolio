@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import PropTypes from "prop-types";
 
-
+  
 const Button = styled.button`
     display: none;
     width: 100%;
@@ -127,9 +128,9 @@ const ProjectCards = ({project,setOpenModal}) => {
         <Card onClick={() => setOpenModal({state: true, project: project})}>
             <Image src={project.image}/>
             <Tags>
-                {project.tags?.map((tag, index) => (
-                <Tag>{tag}</Tag>
-                ))}
+            {project.tags.map((tag, index) => (
+  <Tag key={index}>{tag}</Tag> ))}
+
             </Tags>
             <Details>
                 <Title>{project.title}</Title>
@@ -138,12 +139,29 @@ const ProjectCards = ({project,setOpenModal}) => {
             </Details>
             <Members>
                 {project.member?.map((member) => (
-                    <Avatar src={member.img}/>
+                    <Avatar key={member.id} src={member.img} />
+ 
                 ))}
             </Members>
             {/* <Button>View Project</Button> */}
         </Card>
     )
 }
-
+ProjectCards.propTypes = {
+    project: PropTypes.shape({
+      image: PropTypes.string.isRequired, // Validate `image` as a string
+      tags: PropTypes.arrayOf(PropTypes.string).isRequired, // Validate `tags` as an array of strings
+      title: PropTypes.string.isRequired, // Validate `title` as a string
+      date: PropTypes.string.isRequired, // Validate `date` as a string (or use PropTypes.instanceOf(Date) if it's a Date object)
+      description: PropTypes.string.isRequired, // Validate `description` as a string
+      member: PropTypes.arrayOf(
+        PropTypes.shape({
+          img: PropTypes.string.isRequired, // Validate `member.img` as a string
+        })
+      ).isRequired, // Validate `member` as an array of objects
+    }).isRequired,
+    setOpenModal: PropTypes.func.isRequired, // Ensure `setOpenModal` is a function
+  };
+  
+  
 export default ProjectCards

@@ -174,7 +174,7 @@ const HeroBgAnimation = () => (
           dur="10s"
           begin="3"
           repeatCount="indefinite"
-          rotate="auto"
+          rotate="auto" 
         >
           <mpath xlinkHref="#path_0" />
         </animateMotion>
