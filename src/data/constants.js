@@ -284,6 +284,46 @@ export const education = [
 ];
 export const projects = [
   {
+    id: 5,
+    title: "Anomaly_Detection_for_Fraud",
+    date: "Mar 2025",
+    description:
+     "This project focuses on detecting anomalies in a highly imbalanced fraud dataset using unsupervised techniques. It involves thorough exploratory data analysis and visualization to understand data distributions and identify outlier behavior. Models such as Isolation Forest and Autoencoders are employed to flag potential fraudulent activities. Evaluation metrics like confusion matrices and classification reports are used to assess detection performance. The project demonstrates a complete pipeline from data preprocessing to model training and insightful visualization.",
+    image:
+     "https://firebasestorage.googleapis.com/v0/b/portfolio-84f15.firebasestorage.app/o/anamoly.png?alt=media&token=1cdce65c-d22f-488a-921b-b9e1a813a85e",
+    tags: [
+      "Pandas & NumPy",
+      "Matplotlib & Seaborn",
+      "Scikit-learn",
+      "Exploratory Data Analysis (EDA)",
+      "Anomaly Detection Models",
+      "Version Control & Collaboration",
+    ],
+    category: "Data Science",
+    github: "https://github.com/ManeeshwarMarpu/Data-Science-Projects/tree/main/Anomaly_Detection_for_Fraud",
+
+  },
+  {
+    id: 6,
+    title: "Weather Analysis",
+    date: "Feb 2025",
+    description:
+     "This project integrates data preprocessing, ARIMA model fitting, comprehensive diagnostic checks, and forecast evaluation to deliver a robust time series analysis framework. It serves as a practical example for anyone interested in learning time series forecasting, weather analysis, and model validation techniques.",
+    image:
+     "https://firebasestorage.googleapis.com/v0/b/portfolio-84f15.firebasestorage.app/o/weatherproject.png?alt=media&token=f8e6d69c-fe58-454a-a98c-c2fb981ca7b1",
+    tags: [
+      "Pandas & NumPy",
+      "Matplotlib & Seaborn",
+      "Scikit-learn",
+      "Exploratory Data Analysis (EDA)",
+      "ARIMA Model",
+      "Version Control & Collaboration",
+    ],
+    category: "Data Science",
+    github: "https://github.com/ManeeshwarMarpu/sdpproj3",
+
+  },
+  {
     id: 3,
     title: "Video Manager",
     date: "Aug 2023 - Dec 2023",
@@ -304,7 +344,7 @@ export const projects = [
   {
     id: 4,
     title: "My Portfolio",
-    date: "Feb 2025",
+    date: "Jan 2025",
     description:
      "My portfolio showcases my work as a software engineer, featuring dynamic projects with interactive UI elements and seamless dark/light mode transitions. Each project card includes detailed descriptions, technologies used, and GitHub links, with a smart notification for unpublished code. The portfolio is built for responsiveness, accessibility, and smooth animations, offering an engaging user experience. It highlights my expertise in front-end and back-end technologies, emphasizing well-structured design and functionality" ,
      image:

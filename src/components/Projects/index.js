@@ -5,8 +5,9 @@ import ProjectCard from '../Cards/ProjectCards'
 import { projects } from '../../data/constants'
 import PropTypes from "prop-types";
 
-const Projects = ({openModal,setOpenModal}) => {
+const Projects = ({ openModal, setOpenModal }) => {
   const [toggle, setToggle] = useState('all');
+
   return (
     <Container id="projects">
       <Wrapper>
@@ -14,7 +15,7 @@ const Projects = ({openModal,setOpenModal}) => {
         <Desc>
           I have worked on a wide range of projects. From web apps to android apps. Here are some of my projects.
         </Desc>
-        <ToggleButtonGroup >
+        <ToggleButtonGroup>
           {toggle === 'all' ?
             <ToggleButton active value="all" onClick={() => setToggle('all')}>All</ToggleButton>
             :
@@ -39,38 +40,40 @@ const Projects = ({openModal,setOpenModal}) => {
             <ToggleButton value="DevOps" onClick={() => setToggle('DevOps')}>DevOps</ToggleButton>
           }
         </ToggleButtonGroup>
+        
         <CardContainer>
-        {toggle === "all" &&
-  projects.map((project) => (
-    <ProjectCard 
-      key={project.id} // ✅ Add a unique key
-      project={project} 
-      openModal={openModal} 
-      setOpenModal={setOpenModal} 
-    />
-  ))
-}
+          {toggle === "all" &&
+            projects.slice(0, 6).map((project) => ( // ✅ Limit to 6 projects
+              <ProjectCard
+                key={project.id} // ✅ Unique key
+                project={project}
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+              />
+            ))
+          }
 
-{projects
-  .filter((item) => item.category === toggle)
-  .map((project) => (
-    <ProjectCard 
-      key={project.id} // ✅ Add a unique key
-      project={project} 
-      openModal={openModal} 
-      setOpenModal={setOpenModal} 
-    />
-  ))
-}
-
+          {projects
+            .filter((item) => item.category === toggle)
+            .slice(0, 6) // ✅ Limit filtered projects to 6
+            .map((project) => (
+              <ProjectCard
+                key={project.id} // ✅ Unique key
+                project={project}
+                openModal={openModal}
+                setOpenModal={setOpenModal}
+              />
+            ))
+          }
         </CardContainer>
       </Wrapper>
     </Container>
   )
 }
+
 Projects.propTypes = {
   openModal: PropTypes.object.isRequired,
   setOpenModal: PropTypes.func.isRequired,
 };
 
-export default Projects
+export default Projects;
